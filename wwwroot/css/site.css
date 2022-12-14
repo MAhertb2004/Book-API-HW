@@ -1,0 +1,89 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.required {
+    color:red;
+}
+
+tr, td{
+    border:5px solid black;
+}
+
+
+#HomepageBody {
+    background-image: url('../pictures/1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: cover;
+    animation: change 100s infinite ease-in-out;
+}
+
+
+#BookListPageBody {
+    background-image: url('../pictures/11.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    margin-bottom: 60px;
+}
+  
+@keyframes change {
+    0% {
+        background-image: url('../pictures/1.jpg');
+    }
+    10% {
+        background-image: url('../pictures/2.jpg');
+    } 
+
+    20% {
+        background-image: url('../pictures/3.jpg');
+    }
+    30% {
+        background-image: url('../pictures/4.jpg');
+    } 
+    40% {
+        background-image: url('../pictures/5.jpg');
+    }
+    50% {
+        background-image: url('../pictures/6.jpg');
+    } 
+    60% {
+        background-image: url('../pictures/7.jpg');
+    }
+    70% {
+        background-image: url('../pictures/8.jpg');
+    } 
+    80% {
+        background-image: url('../pictures/9.jpg');
+    }
+    90% {
+        background-image: url('../pictures/10.jpg');
+    } 
+    100% {
+        background-image: url('../pictures/11.jpg');
+    }
+
+}

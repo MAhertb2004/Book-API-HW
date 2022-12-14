@@ -1,0 +1,55 @@
+﻿@if (ViewBag.Book.BookID == 0)
+{
+    @:<h1><strong>Add New Book</strong></h1>   
+}
+else
+{
+    @:<h1><strong>Update This Book</strong></h1>
+}
+
+<font color="red">* </font> are required fields <br />
+
+@if (ViewBag.errorMessage != null)
+{
+    @foreach (string error in ViewBag.errorMessage)
+    {
+        <h4 class="required"> @error </h4>
+    }
+}
+
+<form action="/Book/SaveCreateAndUpdateBook/" method="post">
+    
+    <input type="hidden" id="BookID" name="BookID" placeholder="Book ID" value="@ViewBag.Book.BookID" />
+    <br />    
+
+    <label for="Title">Book Title<span class="required">* </span></label><br />
+    @if (ViewBag.Book.Title != null)
+    {
+        <input type="text" id="Title" name="Title" placeholder="Book Title" value="@ViewBag.Book.Title" />
+    }
+    else
+    {
+        <input type="text" id="Title" name="Title" placeholder="Book Title" />
+    }
+    <br />    <br />
+
+    <label for="NumberofPages">Number of Pages<span class="required">* </span></label><br />
+    @if (ViewBag.Book.NumberofPages != 0)
+    {
+        <input type="number" id="NumberofPages" name="NumberofPages" placeholder="Number of Pages" value="@ViewBag.Book.NumberofPages" />
+    }
+    else
+    {
+        <input type="number" id="NumberofPages" name="NumberofPages" placeholder="Number of Pages"/>
+    }
+       
+    <br />    <br />
+
+    <input type="submit" id="submit" name="submit" value="Submit" class="btn btn-primary" />
+
+</form>
+
+
+
+
+    
