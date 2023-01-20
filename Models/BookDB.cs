@@ -6,7 +6,7 @@ namespace BookStore.Models
 {
     public class BookDB
     {
-        private string connectionString = ("server = Administrator; database = Book; user id = reader; password = pass01;");
+        private string connectionString = ("server = Administrator; database = Book; user id = reader; password = ;");
         public List<Book> GetAllBooks()
         {
             List<Book> books = new List<Book>();
