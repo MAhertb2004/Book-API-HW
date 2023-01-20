@@ -6,7 +6,7 @@ namespace BookStore.Models
 {
     public class BookDB
     {
-        private string connectionString = ("server = Administrator; database = Book; user id = reader; password = pass123;");
+        private string connectionString = ("server = Administrator; database = Book; user id = reader; password = pass01;");
         public List<Book> GetAllBooks()
         {
             List<Book> books = new List<Book>();
@@ -33,7 +33,7 @@ namespace BookStore.Models
 
         public void DeleteBook(int BookID)
         {
-            string sql = "DELETE FROM [Book] WHERE [BookID] > @BookID";
+            string sql = "DELETE FROM [Book] WHERE [BookID] = @BookID";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Execute(sql, new { BookID });
